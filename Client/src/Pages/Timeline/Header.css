@@ -1,0 +1,17 @@
+.header{
+    border: 2px solid gray;
+    padding: 2px;
+    font-family: "Inter", sans-serif;
+}
+
+.header-bar{
+    border: 2px solid gray;
+    padding: 2px;
+}
+.header-bar-nav{
+    list-style-type: none;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
