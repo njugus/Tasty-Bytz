@@ -7,6 +7,8 @@ function Header() {
                 <ul className="header-bar-nav">
                     <li>Feed</li>
                     <li>Post a Recipee</li>
+                    <li>View Your Recipes</li>
+                    <li>Log Out</li>
                 </ul>
             </div>
         </section>

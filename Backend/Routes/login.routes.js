@@ -4,7 +4,7 @@ import  bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken'
 const route_2 = Router();
 const prisma = new PrismaClient();
-const SECRET_KEY = "hdjdjdjksksksk"
+const SECRET_KEY = "rwrwknknrw";
 
 route_2.post("/", async(req, res) => {
     const { email, password} = req.body;
