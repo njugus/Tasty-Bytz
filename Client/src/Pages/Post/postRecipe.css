@@ -1,0 +1,90 @@
+/* Container for the entire form */
+.recipe-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Inter", sans-serif;
+    margin-top: 2em;
+  }
+  
+  /* Form label styling */
+  .recipe-form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* General form control styling */
+  .recipe-form-container .form-control {
+    margin-bottom: 16px;
+  }
+  
+  /* Input and textarea styling */
+  .recipe-form-container input[type="text"],
+  .recipe-form-container input[type="url"],
+  .recipe-form-container textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Styling for the ingredient fields */
+  .recipe-form-container .form-control .ingredient-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .recipe-form-container .form-control .ingredient-field input {
+    flex: 1;
+    margin-right: 8px;
+  }
+  
+  /* Button styling */
+  .recipe-form-container button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recipe-form-container button:hover {
+    background-color: lightcoral;
+  }
+  
+  /* Styling for the add/remove buttons */
+  .recipe-form-container .form-control button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  
+  .recipe-form-container .form-control button.remove {
+    background-color: #dc3545;
+  }
+  
+  .recipe-form-container .form-control button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Error message styling */
+  .recipe-form-container .error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  

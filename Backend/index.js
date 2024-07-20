@@ -23,7 +23,8 @@ app.use("/api/sign", route_1);
 app.use("/api/login", route_2);
 app.use("/api/category", router_5);
 app.use("/api/recipe", authMiddleware,  router_3);
-app.use("/api/getRecipees", authMiddleware, router_3)
+app.use("/api/getRecipees",  router_3)
+app.use("/api/getAllCategories", router_5)
 
 // app.post('/api/sign_up', (req, res) => {
 //     res.send('Post Successfull!');

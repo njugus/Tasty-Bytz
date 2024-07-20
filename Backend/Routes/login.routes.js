@@ -29,6 +29,9 @@ route_2.post("/", async(req, res) => {
             const token = jwt.sign(payload, SECRET_KEY);
             res.cookie("access_token", token).json({success : true, data : payload});
         }
+        else{
+            return res.status(400).json({success : false, message : "Invalid User Credentials"})
+        }
     }catch(e) {
         res.status(500).json({success : false, message : e.message})
     }

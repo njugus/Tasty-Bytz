@@ -1,19 +1,21 @@
 .about-us{
-    border : 2px solid gray;
+    /* border : 2px solid gray; */
     padding: 3px;
     display: flex;
     gap: 2em;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .about-image{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 2px;
     width: 100%;
     max-width: 20%;
     border-radius: 5px;
 }
 .about-description{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     font-family: "Inter", sans-serif;
     border-radius: 5px;
     padding: 5em;

@@ -1,18 +1,21 @@
 .header{
-    border: 2px solid gray;
+    /* border: 1px solid gray; */
     padding: 2px;
     font-family: "Inter", sans-serif;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
 
 .header-bar{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 2px;
 }
 .header-bar-nav{
     list-style-type: none;
-    border: 2px solid gray;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 5px;
 }

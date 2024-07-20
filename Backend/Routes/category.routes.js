@@ -20,4 +20,13 @@ router_5.post("/", async(req, res) => {
     }
 })
 
+router_5.get("/", async(req, res) => {
+    try{
+        const allCategories = await prisma.category.findMany();
+        res.status(200).json({success : true, result : allCategories});
+    }catch(e){
+        res.status(500).json({success : false, message : e.message});
+    }
+})
+
 export default router_5;

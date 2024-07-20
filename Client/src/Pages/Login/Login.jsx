@@ -2,9 +2,12 @@ import { useUser } from '../../Context/Context';
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import './Login.css'
+import './Login.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const { setUserInformation } = useUser();
+  const navigate = useNavigate();
   const initialValues = {
     email: '',
     password: '',
@@ -19,8 +22,9 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:3000/api/login', values, { withCredentials: true });
       if (response.data.success) {
-        setUserInformation(response.data.token);
-        // navigate('/profile');
+        console.log(response);
+        setUserInformation(response.data);
+        navigate('/timeline')
       }
     } catch (error) {
       console.error('Login error', error);
@@ -60,6 +64,7 @@ const Login = () => {
           </Form>
         )}
       </Formik>
+      <p>Don't Have an Account? <a href="/signup">Sign Up</a></p>
     </div>
   );
 };
