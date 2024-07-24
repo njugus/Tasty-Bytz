@@ -5,9 +5,10 @@ import router_3 from './Routes/recipee.routes.js';
 import cookieParser from 'cookie-parser';
 import authMiddleware from './Routes/middleware.js';
 import router_5 from './Routes/category.routes.js';
+import route_7 from './Routes/userrecipees.routes.js';
 import cors from 'cors';
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(cookieParser())
 app.use(express.json());
@@ -22,9 +23,13 @@ app.use(cors({
 app.use("/api/sign", route_1);
 app.use("/api/login", route_2);
 app.use("/api/category", router_5);
-app.use("/api/recipe", authMiddleware,  router_3);
+app.use("/api/recipe",  router_3);
 app.use("/api/getRecipees",  router_3)
-app.use("/api/getAllCategories", router_5)
+app.use("/api/getAllCategories", router_5);
+app.use("/api/updateProfile", route_1);
+app.use("/api/userRecipees", route_7)
+
+
 
 // app.post('/api/sign_up', (req, res) => {
 //     res.send('Post Successfull!');

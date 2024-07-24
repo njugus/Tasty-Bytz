@@ -1,0 +1,64 @@
+.main-section{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    font-family: "Inter", sans-serif;
+}
+.sidebar-links{
+    text-decoration: none;  
+    cursor: pointer;
+    margin: 2em;
+}
+.Sidebar{
+    /* border: 2px solid gray; */
+    background-color: orange; 
+    width: 100%;
+    max-width: 350px;
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    /* padding: 4em; */
+    border-radius: 10px;
+    margin: 2em;
+
+}
+.main-heading{
+    margin: 2em;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-family: var(--primary-font);
+}
+th {
+    background-color: #f2f2f2;
+}
+.User-Management-section{
+    padding: 3em;
+    border: 2px solid gray;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+}
+.main{
+    border: 2px solid gray;
+    padding: 1px;
+}
+.categories section{
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,23 @@
+.Sidebar{
+    /* border: 2px solid gray; */
+    padding: 20px;
+}
+.sidebar-links{
+    /* border: 2px solid gray; */
+    padding: 20px;
+    list-style-type: none;
+  
+}
+
+.sidebar-links li{
+    margin: 1.5em;
+    font-family: var(--primary-font);
+    color: white;
+    
+}
+.sidebar-links h1{
+    font-family: var(--primary-font);
+    font-size: 30px;
+    font-weight: 700;
+
+}

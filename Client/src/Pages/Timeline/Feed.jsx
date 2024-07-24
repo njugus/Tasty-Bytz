@@ -1,10 +1,11 @@
 import './Feed.css';
 import { useStoreFeed } from './feed.js';
 import { useEffect } from 'react';
+import { useUser } from '../../Context/Context.jsx';
 
 function Feed() {
     const { feed, fetchFeed, loading, error } = useStoreFeed();
-
+    const user = useUser();
     useEffect(() => {
         const fetchData = async () => {
             await fetchFeed();
@@ -41,6 +42,9 @@ function Feed() {
                                     <li key={index}>{ingredient}</li>
                                 ))}
                             </ul>
+                        </div>
+                        <div className="poster-details">
+                            {/* <h2 className="poster-name">Posted By</h2> */}
                         </div>
                     </div>
                 ))}

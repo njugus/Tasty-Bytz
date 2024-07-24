@@ -12,7 +12,7 @@
 }
 .header-bar-nav{
     list-style-type: none;
-    
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

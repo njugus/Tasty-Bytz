@@ -26,7 +26,7 @@ const SignUp = () => {
   const register = async (first_name, last_name, email, password) => {
     setLoading(true);
     try {
-        const response = await axios.post('http://localhost:3000/api/sign', { first_name, last_name, email, password }, { withCredentials: true });
+        const response = await axios.post('http://localhost:5000/api/sign', { first_name, last_name, email, password }, { withCredentials: true });
         setLoading(false);
         if (response.status === 201) {
             alert("Registration Successful");
@@ -88,3 +88,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+

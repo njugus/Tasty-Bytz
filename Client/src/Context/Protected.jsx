@@ -16,7 +16,7 @@
 
 // export default ProtectedRoute;
 
-
+import Admin from '../Components/UpdateForm/Admin/Admin';
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useUser } from './Context';
@@ -28,8 +28,10 @@ const ProtectedRoute = ({ children }) => {
     // If there is no user, redirect to the login page
     return <Navigate to="/login" />;
   }
-
-  // If user is authenticated, render the children
+  console.log(user)
+  if (user.data.role === "admin"){
+    return <Admin />;
+  }
   return children;
 };
 

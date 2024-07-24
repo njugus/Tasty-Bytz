@@ -53,3 +53,10 @@
     justify-content: center;
     font-weight: 800;
 }
+.buttons-div{
+    /* border: 2px solid gray; */
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+}

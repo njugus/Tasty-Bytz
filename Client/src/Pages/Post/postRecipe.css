@@ -71,6 +71,8 @@
     border: none;
     padding: 5px 10px;
     margin-left: 5px;
+    width: 100%;
+    max-width: 100px;
   }
   
   .recipe-form-container .form-control button.remove {

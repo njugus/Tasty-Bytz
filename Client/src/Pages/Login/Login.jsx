@@ -20,9 +20,9 @@ const Login = () => {
 
   const onSubmit = async (values, { setSubmitting }) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/login', values, { withCredentials: true });
+      const response = await axios.post('http://localhost:5000/api/login', values, { withCredentials: true });
       if (response.data.success) {
-        console.log(response);
+        alert("Login Successfull")
         setUserInformation(response.data);
         navigate('/timeline')
       }

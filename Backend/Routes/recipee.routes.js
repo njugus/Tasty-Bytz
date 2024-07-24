@@ -5,7 +5,7 @@ import authMiddleware from "./middleware.js";
 const router_3 = Router();
 const prisma = new PrismaClient();
 
-router_3.post("/", authMiddleware, async (req, res) => {
+router_3.post("/",  authMiddleware, async (req, res) => {
     const { title, ingredients, video_url, category_id } = req.body;
     const user_id = req.user.id;
 
@@ -37,7 +37,7 @@ router_3.post("/", authMiddleware, async (req, res) => {
     }
 });
 
-router_3.get("/", async(req, res) => {
+router_3.get("/",  async(req, res) => {
     try{
         const allRecipees = await prisma.recipe.findMany();
         res.status(200).json({success : true, details : allRecipees})
@@ -45,6 +45,42 @@ router_3.get("/", async(req, res) => {
         res.status(500).json({success : false, message: e.message})
     }
 })
+
+router_3.get("/:id", async(req, res) => {
+    const recipe_id = req.params.id;
+    try{
+        const response = await prisma.recipe.findUnique({
+            where : {
+                id : recipe_id
+            }
+        })
+        res.status(200).json({success : true, details : response})
+    }catch(error){
+        res.status(500).json({success : false, message : e.message})
+    }
+})
+
+router_3.patch("/:id" , async(req, res) => {
+
+    const recipe_id = req.params.id;
+    const { title, ingredients } = req.body;
+    const ingredientsString = JSON.stringify(ingredients);
+    try{
+        const response = await prisma.recipe.update({
+            where : {
+                id : recipe_id
+            },
+            data : {
+                title : title,
+                ingredients : ingredientsString
+            },
+        })
+        res.status(200).json({success : true, details : response})
+    }catch(error){
+        res.status(500).json({success : false, message : error.message})
+    }
+}) 
+
 export default router_3;
 
 

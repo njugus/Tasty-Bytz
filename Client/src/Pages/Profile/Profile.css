@@ -1,0 +1,108 @@
+.profile-card {
+    width: 100%;
+    max-width: 1250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    gap: 2em;
+    margin-top: 2em;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border : 2px solid gray;
+  }
+  
+  .linkedin-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    margin-top: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .profile-body {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .profile-body h2,
+  .profile-body h3 {
+    text-align: center;
+  }
+  
+  .profile-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .profile-row label {
+    font-weight: bold;
+  }
+  
+  .profile-row input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .profile-row a {
+    color: #0073b1;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  
+  .profile-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .cancel-button,
+  .save-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .cancel-button {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
